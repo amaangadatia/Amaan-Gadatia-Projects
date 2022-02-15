@@ -43,6 +43,7 @@ public class NameRecord {
 
     // returns the 4 digit year where the name was most popular
     // return the earliest year in the event of a tie
+    // FIXME: algorithm fails if the name didn't exist in 1880, i.e. rank[0] == 0
     public int bestYear() {
         int bY = 0;             // first year (1880)
         int bR = rank[0];       // first rank of the name (from the year 1880)
